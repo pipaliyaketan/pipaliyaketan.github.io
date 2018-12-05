@@ -3797,7 +3797,7 @@ th {
       filter: grayscale(0%); }
 .version4 .owl-nav-img {
   position: absolute;
-  right: -102px;
+  right: -90px;
   top: 126px; }
   @media (max-width: 1440px) {
     .version4 .owl-nav-img {
@@ -3818,9 +3818,9 @@ th {
   .version4 .owl-nav .owl-prev,
   .version4 .owl-nav .owl-next {
     margin-bottom: 10px;
-    color: #222222;
+        color: #000000;
     font-weight: 800;
-    opacity: 0.6;
+    opacity: 1;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -5280,40 +5280,40 @@ th {
 }
 
 .layer-2 {
-  background: url("https://res.cloudinary.com/dkgrf00g1/image/upload/v1536453880/codepen/lay2.svg")
+  background: url("../img/lay2.svg")
     no-repeat center center fixed;
   animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .layer-3 {
-  background: url("https://res.cloudinary.com/dkgrf00g1/image/upload/v1536453880/codepen/lay3.svg")
+  background: url("../img/lay3.svg")
     no-repeat center center fixed;
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
 }
 .layer-4 {
-  background: url("https://res.cloudinary.com/dkgrf00g1/image/upload/v1536453880/codepen/lay4.svg")
+  background: url("../img/lay4.svg")
     no-repeat center center fixed;
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
 }
 .layer-5 {
-  background: url("https://res.cloudinary.com/dkgrf00g1/image/upload/v1536453880/codepen/lay5.svg")
+  background: url("../img/lay5.svg")
     no-repeat center center fixed;
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s
     both;
 }
 .layer-6 {
-  background: url("https://res.cloudinary.com/dkgrf00g1/image/upload/v1536453881/codepen/lay6.svg")
+  background: url("../img/lay6.svg")
     no-repeat center center fixed;
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s
     both;
 }
 .layer-7 {
-  background: url("https://res.cloudinary.com/dkgrf00g1/image/upload/v1536453881/codepen/lay7.svg")
+  background: url("../img/lay7.svg")
     no-repeat center center fixed;
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.85s
     both;
 }
 .layer-8 {
-  background: url("https://res.cloudinary.com/dkgrf00g1/image/upload/v1536453882/codepen/lay8.svg")
+  background: url("../img/lay8.svg")
     no-repeat center center fixed;
   animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s both;
 }
@@ -5667,6 +5667,36 @@ th {
 }
 .computer #gif.gif-npac{
    background-image: url(../img/npac.gif);
+}
+.computer #gif.gif-dbspgdm{
+   background-image: url(../img/dbspgdm.gif);
+}
+.computer #gif.gif-shilohfashion{
+   background-image: url(../img/shilohfashion.gif);
+}
+.computer #gif.gif-simplyabayasboutique{
+   background-image: url(../img/simplyabayasboutique.gif);
+}
+.computer #gif.gif-gujaratfoodproducts{
+   background-image: url(../img/gujaratfoodproducts.gif);
+}
+.computer #gif.gif-tourringo{
+   background-image: url(../img/tourringo.gif);
+}
+.computer #gif.gif-queenmaryedu{
+   background-image: url(../img/queenmaryedu.gif);
+}
+.computer #gif.gif-tinaranka{
+   background-image: url(../img/tinaranka.gif);
+}
+.computer #gif.gif-2statesrestro{
+   background-image: url(../img/2statesrestro.gif);
+}
+.computer #gif.gif-stag{
+   background-image: url(../img/stag.gif);
+}
+.computer #gif.gif-smartworldtravels{
+   background-image: url(../img/smartworldtravels.gif);
 }
 .computer img {
     position: relative;

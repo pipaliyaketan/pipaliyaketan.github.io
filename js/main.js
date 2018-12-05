@@ -488,12 +488,16 @@ $(function() {
     loop: true,
     margin: 30,
     items: 1,
-    nav: false,
-    dots: true,
+    nav: true,
+    dots: false,
     responsiveClass: true,
     autoplay: 2500,
     slideSpeed: 300,
-    paginationSpeed: 500
+    paginationSpeed: 500,
+    navText: [
+      "<span class='lnr lnr-arrow-up'></span>",
+      "<span class='lnr lnr-arrow-down'></span>"
+    ]
   });
 
   $(".blog-banner-carusel").owlCarousel({
