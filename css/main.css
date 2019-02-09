@@ -5699,3 +5699,39 @@ th {
  /*  position: absolute;
   top: 20% */;
 }
+.mail-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+}
+[tooltip] { position: relative; }
+
+[tooltip]::before { content: ""; position: absolute; top: -6px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); border-width: 4px 6px 0 6px; border-style: solid; border-color: #00afda transparent transparent transparent; z-index: 100; opacity: 0; -webkit-transition: all 250ms ease; transition: all 250ms ease; }
+
+[tooltip]::after { content: attr(tooltip); position: absolute; left: 50%; top: -6px; -webkit-transform: translateX(-50%) translateY(-100%); transform: translateX(-50%) translateY(-100%); background: #00afda; text-align: center; color: #fff; padding: 4px 8px; font-size: 14px; min-width: 80px; border-radius: 5px; pointer-events: none; opacity: 0; -webkit-transition: all 250ms ease; transition: all 250ms ease; }
+
+[tooltip-position='left']::before { left: 0; top: 50%; margin-left: -12px; -webkit-transform: translatey(-50%) rotate(-90deg); transform: translatey(-50%) rotate(-90deg); }
+
+[tooltip-position='top']::before { left: 50%; }
+
+[tooltip-position='bottom']::before { top: 100%; margin-top: 8px; -webkit-transform: translateX(-50%) translatey(-100%) rotate(-180deg); transform: translateX(-50%) translatey(-100%) rotate(-180deg); }
+
+[tooltip-position='right']::before { left: 100%; top: 50%; margin-left: 1px; -webkit-transform: translatey(-50%) rotate(90deg); transform: translatey(-50%) rotate(90deg); }
+
+[tooltip-position='left']::after { left: 0; top: 50%; margin-left: -8px; -webkit-transform: translateX(-100%) translateY(-50%); transform: translateX(-100%) translateY(-50%); }
+
+[tooltip-position='top']::after { left: 50%; }
+
+[tooltip-position='bottom']::after { top: 100%; margin-top: 8px; -webkit-transform: translateX(-50%) translateY(0); transform: translateX(-50%) translateY(0); }
+
+[tooltip-position='right']::after { left: 100%; top: 50%; margin-left: 8px; -webkit-transform: translateX(0) translateY(-50%); transform: translateX(0) translateY(-50%); }
+
+[tooltip]:hover::after, [tooltip]:hover::before { opacity: 1; }
