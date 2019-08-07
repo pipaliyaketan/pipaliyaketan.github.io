@@ -1120,14 +1120,21 @@ th {
   z-index: 9999;
   background: url(../img/preloader.gif) center no-repeat #fff; }
  */
-.se-pre-con{
+.circle-bounces{
     width:200px;
     height:60px;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 99999;
+    position: absolute;
+    left:50%;
+    top:50%;
     transform: translate(-50%, -50%);
+}
+.se-pre-con{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
 .circle{
     width:20px;
