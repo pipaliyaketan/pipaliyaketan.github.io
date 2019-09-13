@@ -3021,7 +3021,7 @@ th {
       background-size: 100% 16px, 16px 100%, 100% 16px, 16px 100%;
       background-position: top left, top right, bottom right, bottom left;
       background-repeat: no-repeat;
-      opacity: 0.5; }
+      opacity: 0.5; display:none}
   .version5 .banner-area .banner-content {
     color: #fff; }
     .version5 .banner-area .banner-content .hello {
