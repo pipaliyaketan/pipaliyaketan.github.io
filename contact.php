@@ -1,87 +1,89 @@
-<?php
-// Import PHPMailer classes into the global namespace
-// These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+<!doctype html>
+<html lang="en">
+<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Ketan Pipaliya | Design, Develop & Explore</title>
+        <?php include('include/header-style.php');?>
+    </head>
+    <body class="body dark-mode">
+        <div class="wrapper">
+            <?php include('include/header.php');?>
+            <!--sidebar-->
+            
+            <div class="sidebar-overlay"></div>
+            <div class="content_wrapper">
+                <div class="container ">
+                    <div class="row">
+                           <?php include('include/side-profile.php');?>
+                        <main class="col-lg-8">
+                            <!--Contact-->
+                            <div class="section-wrapper">
+                                <div class="section-icon">
+                                    <i class="ti-pencil-alt"></i>
+                                </div>
+                                <div class="custom-content">
+                                    <h2 class="section-title">Contact</h2>
+                                    <div class="contact_address">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="single-footer-info">
+                                                    <h4>Office</h4>
+                                                    <div class="footer-text">
+                                                        <img src="assets/img/map.png" alt="">
+                                                        <p>Surat, Gujarat, India</p>                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="single-footer-info">
+                                                    <h4>Call Me</h4>                                    
+                                                    <div class="footer-text">
+                                                        <img src="assets/img/phone.png" alt="">
+                                                        <p>Phone : (+91) 937 7336 366</p>
+                                                        <p>Mobile : (+91) 727 6465 975</p>                                  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="single-footer-info ">
+                                                    <h4>Mail Me &amp; Web</h4>                                  
+                                                    <div class="footer-text">
+                                                        <img src="assets/img/globe.png" alt="">
+                                                        <p>Email : ketan.pipaliya333@gmail.com</p>
+                                                        <p>Web : www.pipaliyaketan.github.io</p>                                  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="single-footer-info mb-0">
+                                                     <h4>Drop a message. I would love to hear from you!</h4>                                  
+                                                    <div class="footer-text">
+                                            <p class="mb-0">Want to collaborate on an interesting project and craft some amazing experiences for the public? Need a hand with something that can be made & catered to your own needs? Think no more. 
+<br>
+P.S. I am also open for any full-time opportunities you might have for me.</p>
+</div>
+</div>
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Form content-->
+                            
+                                <!--/.End of form content-->
+                                
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+           <?php include('include/footer.php');?>
+        
+        
+    </body>
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-if (!empty($_POST['name']) && !empty($_POST['email'])) {
-    //Server settings
-    // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = '';                 // SMTP username
-    $mail->Password = '';                           // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to
-
-    //Recipients
-    $mail->setFrom('uppervaliteam@gmail.com', 'Github');
-    $mail->addAddress('uppervaliteam@gmail.com', 'Ketan');     // Add a recipient           
+</html>
 
 
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'New Contact Request';
-    $name    = $_POST['name'];
-    $email   = $_POST['email'];
-    $mobileno = $_POST['mobileno'];
-    $subject = $_POST['subject'];
-    $role = $_POST['role'];
-    $messages = $_POST['message'];
-    $message = "<html>";
-    $message .= "<body>";
-    $message .= "<b>Name : </b>" . $name . "<br/>";
-    $message .= "<b>Email : </b>" . $email . "<br/>";
-    $message .= "<b>Mobile No : </b>" . $mobileno . "<br/>";
-    $message .= "<b>Subject. : </b>" . $subject . "<br/>";
-    $message .= "<b>role. : </b>" . $role . "<br/>";
-    $message .= "<b>Message. : </b>" . $messages . "<br/>";
-    $message .= "</body>";
-    $message .= "</html>";
-    $mail->Body    = $message;
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    $result= $mail->send();
-     if($result===true){
-        echo '<div class="alert alert-success"><strong>Success!</strong> Email Sent Successfully !!!. </div>';
-    }else{
-        echo '<div class="alert alert-danger"><strong>Wrong!</strong> Somthing Went Wrong ! Please Try Again !!!. </div>';
-    }
-}
-/*if (!empty($_POST['name']) && !empty($_POST['email'])) {
-    $to      = "ketan.pipaliya333@gmail.com";
-    $name    = $_POST['name'];
-    $email   = $_POST['email'];
-    $mobileno = $_POST['mobileno'];
-    $subject = $_POST['subject'];
-    $role = $_POST['role'];
-    $messages = $_POST['message'];
-    $sub     = "New Contact Request";
-    $message = "<html>";
-    $message .= "<body>";
-    $message .= "<b>Name : </b>" . $name . "<br/>";
-    $message .= "<b>Email : </b>" . $email . "<br/>";
-    $message .= "<b>Mobile No : </b>" . $mobileno . "<br/>";
-    $message .= "<b>Subject. : </b>" . $subject . "<br/>";
-    $message .= "<b>role. : </b>" . $role . "<br/>";
-    $message .= "<b>Message. : </b>" . $messages . "<br/>";
-    $message .= "</body>";
-    $message .= "</html>";
-    // Always set content-type when sending HTML email
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    // More headers
-    $headers .= 'From: Github Resume Contact Inquiry <donotreply@socialpriest.com>' . "\r\n";
-    $result = mail($to, $sub, $message, $headers);
-    if($result===true){
-        echo '<div class="alert alert-success"><strong>Success!</strong> Email Sent Successfully !!!. </div>';
-    }else{
-        echo '<div class="alert alert-danger"><strong>Wrong!</strong> Somthing Went Wrong ! Please Try Again !!!. </div>';
-    }
-}*/
-?>
